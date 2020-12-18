@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="6f97f65e-adc6-4ec3-a9f6-10c7cb1037ab"
+mode="Desktop">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="CloseAUT"
+	namespace="PruebaConsola">
+	</codegen>
+	<variables>
+		<var
+		id="6c374bc9-9861-4ace-b08e-7d53fab491fe"
+		name="CloseAutProcessIDVar">
+			-1
+		</var>
+	</variables>
+	<recorditems>
+		<closeapprecorditem
+		enabled="True"
+		graceperiod="500ms"
+		method="CloseWindowByProcessID"
+		optional="False"
+		searchpropertyid="92c10599-6e0f-49d2-aec6-5b973357d25e">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="ProcessID"
+				variable="CloseAutProcessIDVar">
+				</binding>
+			</bindings>
+		</closeapprecorditem>
+	</recorditems>
+	<repository
+	id="1fec06bb-cc66-4dbf-a337-819c54f1b6dd"
+	name="RepoCargaInicial"
+	relativepath="RepoCargaInicial.rxrep">
+		<codegen
+		classname="RepoCargaInicial"
+		namespace="PruebaConsola">
+		</codegen>
+		<rootfolder
+		id="be1e33f6-9c4e-4826-bb67-c1d930e2906e"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		CloseAUT.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

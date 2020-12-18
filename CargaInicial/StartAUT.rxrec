@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="54ccd2eb-d490-4d6f-aca3-f545f2b2f691"
+mode="Desktop">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="StartAUT"
+	namespace="PruebaConsola">
+	</codegen>
+	<variables>
+		<var
+		id="f9acc748-495a-403b-9fb8-8931fd608af7"
+		name="StartAutProcessIDVar">
+		</var>
+	</variables>
+	<recorditems>
+		<runapprecorditem
+		enabled="True"
+		maximized="False"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="ReturnVariable"
+				variable="StartAutProcessIDVar">
+				</binding>
+			</bindings>
+			<filename>
+				C:\Windows\System32\cmd.exe
+			</filename>
+			<args>
+			</args>
+		</runapprecorditem>
+	</recorditems>
+	<repository
+	id="1fec06bb-cc66-4dbf-a337-819c54f1b6dd"
+	name="RepoCargaInicial"
+	relativepath="RepoCargaInicial.rxrep">
+		<codegen
+		classname="RepoCargaInicial"
+		namespace="PruebaConsola">
+		</codegen>
+		<rootfolder
+		id="be1e33f6-9c4e-4826-bb67-c1d930e2906e"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		StartAUT.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
