@@ -1,0 +1,2 @@
+C:\Carga_Inicial_QA\Localidades\admin\bin\%1 ""-description "RVASINI" -edit RVASINI -server %2 -gosu C:\Carga_Inicial_QA\Localidades\admin\bin\cc\rvasLuegoDropQA.txt -user su -password gw"" > .\Utilitarios\%3
+Exit 0

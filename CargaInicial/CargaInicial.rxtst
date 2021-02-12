@@ -3,7 +3,6 @@
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
 			<testcase
-			datarangeactive="True"
 			datasource="Carga_Datos_General"
 			id="01525795-b7b9-4094-9f0c-adf79fbe08a3"
 			maxrange="0"
@@ -51,6 +50,32 @@
 					</var>
 				</databinding>
 			</testmodule>
+			<testmodule
+			id="1062a55d-cc8a-49e3-be45-62d821111954"
+			name="DataChangeGeneral"
+			ref="5dbd4375-d139-4ec0-8d49-9e0e3f528dd3"
+			type="Recording">
+				<databinding>
+					<var
+					dataname="bat_a_ejecutar"
+					datasourceid="c44f123e-5cd4-4b3d-966d-0deb8b030e8a"
+					variableid="2b0746ce-7809-4234-a927-07533d0c9d12"
+					variablename="bat_a_ejecutar">
+					</var>
+					<var
+					dataname="modulo"
+					datasourceid="c44f123e-5cd4-4b3d-966d-0deb8b030e8a"
+					variableid="5183d622-4b52-45e9-86bb-a5d3040476b6"
+					variablename="modulo">
+					</var>
+					<var
+					dataname="ArchivoSalida"
+					datasourceid="c44f123e-5cd4-4b3d-966d-0deb8b030e8a"
+					variableid="e5d4d70a-6d8a-4ef1-9acd-82bffd6ff089"
+					variablename="archivoSalida">
+					</var>
+				</databinding>
+			</testmodule>
 			<teardown
 			id="12ab64bd-99a5-4241-af24-3f84216d4c0f"
 			name="teardown">
@@ -60,6 +85,7 @@
 			name="Carga_Localidades_BC">
 			</testcase>
 			<testmodule
+			enabled="False"
 			id="1cba0968-5889-4131-8646-4dc4b70b51aa"
 			name="StartAUT"
 			ref="54ccd2eb-d490-4d6f-aca3-f545f2b2f691"
@@ -124,6 +150,7 @@
 			name="setup">
 			</setup>
 			<testmodule
+			enabled="False"
 			id="3c5796c0-e85b-44c8-bc94-b67fcccc05a7"
 			name="DataChange"
 			ref="c5a850a5-923e-41aa-a554-9e7c3fe054c1"
@@ -346,6 +373,32 @@
 			type="Recording">
 			</testmodule>
 			<testmodule
+			id="9fb94bdd-1e97-4d6a-b7ef-866c2b0acb93"
+			name="DataChangeCCMov"
+			ref="47e45141-c195-49c9-a1dc-c37c6c3d9677"
+			type="Recording">
+				<databinding>
+					<var
+					dataname="bat_a_ejecutar"
+					datasourceid="c2e8eca7-0ea7-46ea-b7f4-5e63e784a709"
+					variableid="9de7e461-15f1-45aa-88a2-93dddbc72fc0"
+					variablename="bat_a_ejecutar">
+					</var>
+					<var
+					dataname="modulo"
+					datasourceid="c2e8eca7-0ea7-46ea-b7f4-5e63e784a709"
+					variableid="3213b7d6-b5e8-4fed-8170-f02cd424aec7"
+					variablename="modulo">
+					</var>
+					<var
+					dataname="ArchivoSalida"
+					datasourceid="c2e8eca7-0ea7-46ea-b7f4-5e63e784a709"
+					variableid="bc35b015-206e-47c1-8bfd-760aeec77938"
+					variablename="archivoSalida">
+					</var>
+				</databinding>
+			</testmodule>
+			<testmodule
 			id="a176c868-19af-4a90-beae-939165002e18"
 			name="StartAUT"
 			ref="54ccd2eb-d490-4d6f-aca3-f545f2b2f691"
@@ -373,7 +426,11 @@
 			name="Carga_Localidades_AB">
 			</testcase>
 			<testcase
+			datarangeactive="True"
+			datasource="Carga_DataChangeCC_General"
 			id="bd115b3e-8ec3-4522-a163-a2e5b2aa474c"
+			maxrange="0"
+			minrange="0"
 			name="DataChangeCC">
 			</testcase>
 			<setup
@@ -453,6 +510,14 @@
 					</var>
 				</databinding>
 			</testmodule>
+			<testcase
+			datarangeactive="True"
+			datasource="Carga_DataChangeCCMOV"
+			id="ffa01e78-4aff-4cdf-aa1a-c58442edf62c"
+			maxrange="0"
+			minrange="0"
+			name="DataChangeCCMov">
+			</testcase>
 		</flatlistofchildren>
 		<childhierarchy>
 			<testsuite
@@ -483,6 +548,18 @@
 						<testmodule
 						id="3c5796c0-e85b-44c8-bc94-b67fcccc05a7"
 						name="DataChange">
+						</testmodule>
+						<testmodule
+						id="1062a55d-cc8a-49e3-be45-62d821111954"
+						name="DataChangeGeneral">
+						</testmodule>
+					</testcase>
+					<testcase
+					id="ffa01e78-4aff-4cdf-aa1a-c58442edf62c"
+					name="DataChangeCCMov">
+						<testmodule
+						id="9fb94bdd-1e97-4d6a-b7ef-866c2b0acb93"
+						name="DataChangeCCMov">
 						</testmodule>
 					</testcase>
 					<testcase
@@ -676,6 +753,52 @@
 			</maskedcolumns>
 		</DataSource>
 		<DataSource
+		filename="Carga_DataChangeCC_General.xlsx"
+		id="c44f123e-5cd4-4b3d-966d-0deb8b030e8a"
+		includefile="Checked"
+		lastknownrowcount="2"
+		name="Carga_DataChangeCC_General"
+		type="Ranorex.Core.Data.ExcelDataConnector"
+		worksheetname="Hoja1"
+		worksheetrange="Auto-Range">
+			<lastknowncolumns>
+				<column>
+					bat_a_ejecutar
+				</column>
+				<column>
+					modulo
+				</column>
+				<column>
+					ArchivoSalida
+				</column>
+			</lastknowncolumns>
+			<maskedcolumns>
+			</maskedcolumns>
+		</DataSource>
+		<DataSource
+		filename="Carga_DataChangeCCMOV.xlsx"
+		id="c2e8eca7-0ea7-46ea-b7f4-5e63e784a709"
+		includefile="Checked"
+		lastknownrowcount="2"
+		name="Carga_DataChangeCCMOV"
+		type="Ranorex.Core.Data.ExcelDataConnector"
+		worksheetname="Hoja1"
+		worksheetrange="Auto-Range">
+			<lastknowncolumns>
+				<column>
+					bat_a_ejecutar
+				</column>
+				<column>
+					modulo
+				</column>
+				<column>
+					ArchivoSalida
+				</column>
+			</lastknowncolumns>
+			<maskedcolumns>
+			</maskedcolumns>
+		</DataSource>
+		<DataSource
 		filename="Carga_Datos_General.xlsx"
 		id="d53be9fc-4829-4d6e-9668-8acdf41d9879"
 		includefile="Checked"
@@ -740,6 +863,9 @@
 			</testcontainer>
 			<testcontainer
 			id="e65f8cd8-cc0a-41d2-861b-1abee363aad6">
+			</testcontainer>
+			<testcontainer
+			id="ffa01e78-4aff-4cdf-aa1a-c58442edf62c">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>

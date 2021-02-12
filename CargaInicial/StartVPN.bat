@@ -1,0 +1,1 @@
+"C:\Program Files\OpenVPN Connect\OpenVPNConnect.exe" connect "PC RanorexVPN"

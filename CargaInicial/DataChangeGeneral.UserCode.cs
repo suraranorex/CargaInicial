@@ -23,7 +23,7 @@ using Ranorex.Core.Testing;
 
 namespace PruebaConsola
 {
-    public partial class DataChange
+    public partial class DataChangeGeneral
     {
         /// <summary>
         /// This method gets called right after the recording has been started.
@@ -34,20 +34,22 @@ namespace PruebaConsola
             // Your recording specific initialization code goes here.
         }
 
-        public void CargaInicial()
+        public void LanzaCargaDataChangeCC(string bat_a_ejecutar, string archivoSalida, string modulo)
         {
             // TODO: Replace the following line with your code implementation.
             //throw new NotImplementedException();
-            Report.Info("Info","Ejecutando el proceso");
+            Report.Info("Info","Ejecutando el proceso de DataChangeCC");
             Process p = new Process();
             ProcessStartInfo S = new ProcessStartInfo();
             
             p.StartInfo.FileName = "cmd.exe";
-            //string cmd1 = "/C C:\\Carga_Inicial_QA\\Localidades\\install_zone_fileQA2AR.bat";
-            //string cmd2 = "C:\\Carga_Inicial_QA\\Localidades -localdevMSSQL ab";
+            string cmd1 = @"/C .\Utilitarios\lanzadorComunDataChangeCC.bat ";
+            string cmd2 = bat_a_ejecutar;
+            string cmd3 = modulo;
+            string cmd4 = archivoSalida;
             
             //p.StartInfo.Arguments = cmd1 + "\"" + cmd2 + "\"" + " > C:\\TEMP\\SalidaComando.txt";            
-            p.StartInfo.Arguments = @"/C .\Utilitarios\lanzador_dataChangeCC_QA4_Oci2.bat";
+            p.StartInfo.Arguments = cmd1 +" "+ cmd2 +" "+ cmd3 +" "+ cmd4;
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.RedirectStandardOutput = true;
             p.StartInfo.RedirectStandardError = true;
@@ -58,37 +60,9 @@ namespace PruebaConsola
             //string error = p.StandardOutput.ReadToEnd();
             p.WaitForExit();
             Report.Info("INFO: ",output);
-          
-        }
-        
-         public void RenombrarArchivo()
-        {
-            // TODO: Replace the following line with your code implementation.
-            //throw new NotImplementedException();
-            
-            bool existe = File.Exists(@".\Utilitarios\SalidaComandoDataChangeCC.txt");
-			
-			try {
-				if (existe)
-				{
-					//File.Delete(@".\Utilitarios\SalidaComando_AB.txt");
-					//File.Move(@"d:\temp\faf.txt",@"d:\temp\faf_"+ System.DateTime.Now.ToString("yyyyMMdd_hhMMss") +".txt");
-					
-					File.Move(@".\Utilitarios\SalidaComandoDataChangeCC.txt",@".\Utilitarios\SalidaComandoDataChangeCC_"+ System.DateTime.Now.ToString("yyyyMMdd_hhmmss") +".txt");
-					Report.Success("I/O","Finalizado el proceso. Renombre Exitoso");
-				}
-				else{
-					Report.Error("No existe el Archivo");
-				}
-				
-			} catch (Exception e) {
-				Report.Failure("I/O","No se pudo realizar la operacion\r\nError: " + e);
-			}
         }
 
-       
-
-        public void VerificaFinal()
+        public void VerificaFinalDataChangeCC(string Datos_Salida)
         {
             // TODO: Replace the following line with your code implementation.
             //throw new NotImplementedException();
@@ -97,12 +71,12 @@ namespace PruebaConsola
            
             try{
             	
-            	aux = File.ReadAllText(@".\Utilitarios\SalidaComandoDataChangeCC.txt");
+            	aux = File.ReadAllText(@".\Utilitarios\" + Datos_Salida);
             	
             	if (aux.Contains("Edit change ref=REFID_001 publicId=cc:1"))
-            		Report.Success("Info: ","El proceso finalizó correctamente");
+            		Report.Success("Info: ","El proceso DataChangeCC finalizó correctamente");
             	else
-            		Report.Error("Info: ","El proceso finalizo incorrectamente");
+            		Report.Error("Info: ","El proceso DataChangeCC finalizo incorrectamente");
             
             }
             catch(Exception e){

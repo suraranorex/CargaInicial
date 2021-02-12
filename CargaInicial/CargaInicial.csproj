@@ -186,6 +186,30 @@
       <UserCode>true</UserCode>
       <id>1091311d-3ad4-49b1-aa6c-3424d81ad74a</id>
     </Compile>
+    <Compile Include="DataChangeCCMov.cs">
+      <BoundTo>926dc85d-6d49-4bea-867e-d543c26b7c66</BoundTo>
+      <DependentUpon>DataChangeCCMov.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>0a770aa3-00cc-40d1-abc1-985c4a8da22a</id>
+    </Compile>
+    <Compile Include="DataChangeCCMov.UserCode.cs">
+      <BoundTo>926dc85d-6d49-4bea-867e-d543c26b7c66</BoundTo>
+      <DependentUpon>DataChangeCCMov.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>f078d204-b567-4e7e-b680-c4a8be1bae15</id>
+    </Compile>
+    <Compile Include="DataChangeGeneral.cs">
+      <BoundTo>f3d8f6db-8e95-4b93-bdae-607f11bbbeb9</BoundTo>
+      <DependentUpon>DataChangeGeneral.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>3ae4a1e4-7566-42b5-9041-6a56b0c38072</id>
+    </Compile>
+    <Compile Include="DataChangeGeneral.UserCode.cs">
+      <BoundTo>f3d8f6db-8e95-4b93-bdae-607f11bbbeb9</BoundTo>
+      <DependentUpon>DataChangeGeneral.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>5d8432e3-7e6a-424d-b57c-9fff428ccea5</id>
+    </Compile>
     <Compile Include="LanzadorCarga.cs">
       <id>e52339ae-79cf-4d5a-a1ed-baf2423b6f76</id>
     </Compile>
@@ -288,9 +312,9 @@
       <recordtableid>c9fcb179-1c50-4f4a-839d-062258416dac</recordtableid>
     </None>
     <None Include="CargaDatosGeneral.rxrec">
-      <BoundTo>590de370-1947-4a3f-ba30-3ea526cad322</BoundTo>
       <id>e0dca522-56be-4752-ad72-89e336fdbe69</id>
       <recordtableid>90a62f0c-ba3f-4dee-8ab0-c6357c5b0f7d</recordtableid>
+      <BoundTo>590de370-1947-4a3f-ba30-3ea526cad322</BoundTo>
     </None>
     <None Include="CargaPaisesBajos_AB.rxrec">
       <BoundTo>590de370-1947-4a3f-ba30-3ea526cad322</BoundTo>
@@ -304,6 +328,20 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <id>ea4ceace-ab00-468f-a867-b2c34da757d4</id>
     </Content>
+    <Content Include="Carga_DataChangeCC_General.xlsx">
+      <Link>Carga_DataChangeCC_General.xlsx</Link>
+      <BoundTo>0480ff61-a265-4d54-ae79-c4d45ad8e555</BoundTo>
+      <DependentUpon>CargaInicial.rxtst</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <id>0663dff3-600f-4871-a7dd-fa707b6b62b4</id>
+    </Content>
+    <Content Include="Carga_DataChangeCCMOV.xlsx">
+      <Link>Carga_DataChangeCCMOV.xlsx</Link>
+      <BoundTo>0480ff61-a265-4d54-ae79-c4d45ad8e555</BoundTo>
+      <DependentUpon>CargaInicial.rxtst</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <id>7c221660-2c4a-41c3-98f7-0697d82154e9</id>
+    </Content>
     <None Include="CloseAUT.rxrec">
       <BoundTo>590de370-1947-4a3f-ba30-3ea526cad322</BoundTo>
       <id>5662de69-0bff-4c3f-9522-3f42f116094f</id>
@@ -313,6 +351,16 @@
       <BoundTo>590de370-1947-4a3f-ba30-3ea526cad322</BoundTo>
       <id>c80e25bd-bf1d-4682-8c76-2d24ed589394</id>
       <recordtableid>c5a850a5-923e-41aa-a554-9e7c3fe054c1</recordtableid>
+    </None>
+    <None Include="DataChangeCCMov.rxrec">
+      <BoundTo>590de370-1947-4a3f-ba30-3ea526cad322</BoundTo>
+      <id>926dc85d-6d49-4bea-867e-d543c26b7c66</id>
+      <recordtableid>47e45141-c195-49c9-a1dc-c37c6c3d9677</recordtableid>
+    </None>
+    <None Include="DataChangeGeneral.rxrec">
+      <BoundTo>590de370-1947-4a3f-ba30-3ea526cad322</BoundTo>
+      <id>f3d8f6db-8e95-4b93-bdae-607f11bbbeb9</id>
+      <recordtableid>5dbd4375-d139-4ec0-8d49-9e0e3f528dd3</recordtableid>
     </None>
     <None Include="Localidades_AB.rxrec">
       <BoundTo>590de370-1947-4a3f-ba30-3ea526cad322</BoundTo>
@@ -362,8 +410,20 @@
       <id>ab6771a6-31fa-4dc1-b931-50f2aeb0dccd</id>
       <recordtableid>54ccd2eb-d490-4d6f-aca3-f545f2b2f691</recordtableid>
     </None>
+    <None Include="StartVPN.bat">
+      <id>ff6a4dbc-1827-4f8d-97db-273e5bb9c41e</id>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Utilitarios\lanzadorComun.bat">
       <id>a8cb61b6-14cd-4984-9132-abbe5a32450c</id>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Utilitarios\lanzadorComunDataChangeCC.bat">
+      <id>3d630246-2b3d-47de-848d-410f93577b7a</id>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Utilitarios\lanzadorComunDataChangeCCMOV.bat">
+      <id>bcf5146a-16cf-48b0-8353-f529b299e6e0</id>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Utilitarios\lanzador_ab.bat">
