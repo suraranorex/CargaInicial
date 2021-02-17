@@ -410,10 +410,6 @@
       <id>ab6771a6-31fa-4dc1-b931-50f2aeb0dccd</id>
       <recordtableid>54ccd2eb-d490-4d6f-aca3-f545f2b2f691</recordtableid>
     </None>
-    <None Include="StartVPN.bat">
-      <id>ff6a4dbc-1827-4f8d-97db-273e5bb9c41e</id>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Utilitarios\lanzadorComun.bat">
       <id>a8cb61b6-14cd-4984-9132-abbe5a32450c</id>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -452,6 +448,13 @@
     <None Include="Utilitarios\lanzador_pc.bat">
       <id>951c3095-dc8d-4d78-99a6-243e65a3c50b</id>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Utilitarios\StartVPN.bat">
+      <id>ff6a4dbc-1827-4f8d-97db-273e5bb9c41e</id>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Utilitarios\VPNConnect.exe">
+      <id>55b55138-9b13-471d-bcb7-9e2fc27ab5be</id>
     </None>
   </ItemGroup>
   <ItemGroup>
