@@ -846,7 +846,7 @@
 		</DataSource>
 	</datasources>
 	<testconfigurations
-	default="DataChangeCC">
+	default="CargaDatosGeneral">
 		<testconfiguration
 		name="CargaDatosGeneral">
 			<testcontainer
