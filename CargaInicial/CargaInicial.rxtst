@@ -429,8 +429,8 @@
 			datarangeactive="True"
 			datasource="Carga_DataChangeCC_General"
 			id="bd115b3e-8ec3-4522-a163-a2e5b2aa474c"
-			maxrange="0"
-			minrange="0"
+			maxrange="1"
+			minrange="1"
 			name="DataChangeCC">
 			</testcase>
 			<setup
@@ -846,7 +846,7 @@
 		</DataSource>
 	</datasources>
 	<testconfigurations
-	default="CargaDatosGeneral">
+	default="DataChangeCC">
 		<testconfiguration
 		name="CargaDatosGeneral">
 			<testcontainer
@@ -863,9 +863,6 @@
 			</testcontainer>
 			<testcontainer
 			id="e65f8cd8-cc0a-41d2-861b-1abee363aad6">
-			</testcontainer>
-			<testcontainer
-			id="ffa01e78-4aff-4cdf-aa1a-c58442edf62c">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
