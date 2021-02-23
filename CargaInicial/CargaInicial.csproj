@@ -455,6 +455,7 @@
     </None>
     <None Include="Utilitarios\VPNConnect.exe">
       <id>272323ec-ce6e-4a44-a12a-d529a41db723</id>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
